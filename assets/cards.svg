@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" width="1200" height="200" role="img" aria-label="17 stars, Pull Shark, YOLO, Brooklyn NY">
+  <defs>
+    <linearGradient id="sweep" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="c1"><rect x="0" y="0" width="282" height="180" rx="18"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .card { opacity: 0; transform: translateY(16px); animation: in .8s cubic-bezier(.2,.8,.2,1) forwards; }
+    .k1 { animation-delay: .1s } .k2 { animation-delay: .25s } .k3 { animation-delay: .4s } .k4 { animation-delay: .55s }
+    @keyframes in { to { opacity: 1; transform: none; } }
+    .sw { animation: sw 5s ease-in-out infinite; }
+    .k2 .sw { animation-delay: .6s } .k3 .sw { animation-delay: 1.2s } .k4 .sw { animation-delay: 1.8s }
+    @keyframes sw { 0% { transform: translateX(-300px); } 50%,100% { transform: translateX(300px); } }
+    .ico { animation: bob 3s ease-in-out infinite alternate; }
+    @keyframes bob { to { transform: translateY(-4px); } }
+    @media (prefers-reduced-motion: reduce) { .card { opacity: 1; transform: none; animation: none; } .sw, .ico { animation: none; } }
+  </style>
+
+  <!-- card 1 -->
+  <g class="card k1" transform="translate(10 10)">
+    <g clip-path="url(#c1)"><rect width="282" height="180" rx="18" fill="#111113"/><rect class="sw" width="140" height="180" fill="url(#sweep)"/></g>
+    <rect width="282" height="180" rx="18" fill="none" stroke="#fff" stroke-opacity=".1"/>
+    <path class="ico" d="M36 52l7.4 15 16.6 2.4-12 11.7 2.8 16.5L36 89.700 21.200 97.600 24 81.100 12 69.400 28.600 67z" fill="#C6FF3D" transform="translate(6 -2) scale(.95)"/>
+    <text x="28" y="140" font-size="52" font-weight="800" fill="#F4F4F0">17</text>
+    <text x="28" y="164" font-size="12" fill="#8A8A92" letter-spacing="2">STARS GIVEN</text>
+  </g>
+
+  <!-- card 2 -->
+  <g class="card k2" transform="translate(308 10)">
+    <g clip-path="url(#c1)"><rect width="282" height="180" rx="18" fill="#111113"/><rect class="sw" width="140" height="180" fill="url(#sweep)"/></g>
+    <rect width="282" height="180" rx="18" fill="none" stroke="#fff" stroke-opacity=".1"/>
+    <g class="ico" fill="none" stroke="#8B7BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="translate(24 36)">
+      <circle cx="10" cy="10" r="6"/><circle cx="10" cy="50" r="6"/><circle cx="46" cy="50" r="6"/>
+      <path d="M10 16v28M46 44V28a10 10 0 0 0-10-10H26"/><path d="M31 10l-6 8 6 8" stroke-opacity="0"/>
+    </g>
+    <text x="28" y="140" font-size="34" font-weight="800" fill="#F4F4F0">PULL SHARK</text>
+    <text x="28" y="164" font-size="12" fill="#8A8A92" letter-spacing="2">ACHIEVEMENT</text>
+  </g>
+
+  <!-- card 3 -->
+  <g class="card k3" transform="translate(606 10)">
+    <g clip-path="url(#c1)"><rect width="282" height="180" rx="18" fill="#111113"/><rect class="sw" width="140" height="180" fill="url(#sweep)"/></g>
+    <rect width="282" height="180" rx="18" fill="none" stroke="#fff" stroke-opacity=".1"/>
+    <g class="ico" transform="translate(24 40)" fill="none" stroke="#C6FF3D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M28 2L6 34h20l-4 24 26-36H28z"/>
+    </g>
+    <text x="28" y="140" font-size="52" font-weight="800" fill="#F4F4F0">YOLO</text>
+    <text x="28" y="164" font-size="12" fill="#8A8A92" letter-spacing="2">ACHIEVEMENT</text>
+  </g>
+
+  <!-- card 4 -->
+  <g class="card k4" transform="translate(904 10)">
+    <g clip-path="url(#c1)"><rect width="282" height="180" rx="18" fill="#111113"/><rect class="sw" width="140" height="180" fill="url(#sweep)"/></g>
+    <rect width="282" height="180" rx="18" fill="none" stroke="#fff" stroke-opacity=".1"/>
+    <g class="ico" transform="translate(24 36)" fill="none" stroke="#8B7BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M30 62s22-20 22-36a22 22 0 0 0-44 0c0 16 22 36 22 36z"/><circle cx="30" cy="26" r="7"/>
+    </g>
+    <text x="28" y="140" font-size="34" font-weight="800" fill="#F4F4F0">BROOKLYN</text>
+    <text x="28" y="164" font-size="12" fill="#8A8A92" letter-spacing="2">NEW YORK, NY</text>
+  </g>
+</svg>

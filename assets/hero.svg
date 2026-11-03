@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="s5sa — developer, Brooklyn NY">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity=".045" stroke-width="1"/>
+      <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="40 40" dur="6s" repeatCount="indefinite"/>
+    </pattern>
+    <linearGradient id="wave" x1="0" x2="1">
+      <stop offset="0" stop-color="#C6FF3D" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#C6FF3D"/>
+      <stop offset="1" stop-color="#8B7BFF" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vig" cx=".5" cy=".5" r=".75">
+      <stop offset=".55" stop-color="#0A0A0B" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0A0A0B" stop-opacity=".9"/>
+    </radialGradient>
+    <radialGradient id="core" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#C6FF3D" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#C6FF3D" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="reveal">
+      <rect x="0" y="0" width="0" height="420">
+        <animate attributeName="width" from="0" to="760" dur="1.4s" begin="0.2s" fill="freeze" calcMode="spline" keySplines=".2 .8 .2 1" keyTimes="0;1"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <style>
+    text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .spin1 { transform-origin: 940px 210px; animation: spin 40s linear infinite; }
+    .spin2 { transform-origin: 940px 210px; animation: spin 26s linear infinite reverse; }
+    .spin3 { transform-origin: 940px 210px; animation: spin 16s linear infinite; }
+    .spin4 { transform-origin: 940px 210px; animation: spin 9s linear infinite reverse; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .flow { stroke-dasharray: 220 780; animation: flow 7s linear infinite; }
+    .flow.b { animation-duration: 9s; animation-delay: -3s; }
+    .flow.c { animation-duration: 11s; animation-delay: -6s; }
+    @keyframes flow { to { stroke-dashoffset: -1000; } }
+    .sub { opacity: 0; animation: sub 9s ease-in-out infinite both; }
+    .sub.s2 { animation-delay: 3s; }
+    .sub.s3 { animation-delay: 6s; }
+    @keyframes sub {
+      0%   { opacity: 0; transform: translateY(10px); }
+      5%, 28% { opacity: 1; transform: translateY(0); }
+      34%, 100% { opacity: 0; transform: translateY(-10px); }
+    }
+    .cursor { animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .pulse { transform-origin: 70px 52px; animation: pulse 2s ease-out infinite; }
+    @keyframes pulse { 0% { transform: scale(1); opacity: .8; } 100% { transform: scale(3.2); opacity: 0; } }
+    .fade { opacity: 0; animation: fade 1s ease 1.4s forwards; }
+    @keyframes fade { to { opacity: 1; } }
+    .scan { animation: scan 5s linear infinite; }
+    @keyframes scan { from { transform: translateY(-40px); } to { transform: translateY(460px); } }
+    .drift { animation: drift 6s ease-in-out infinite alternate; }
+    @keyframes drift { to { transform: translateY(-8px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } .sub.s1 { opacity: 1; } }
+  </style>
+
+  <rect width="1200" height="420" fill="#0A0A0B"/>
+  <rect width="1200" height="420" fill="url(#grid)"/>
+
+  <!-- orbital system -->
+  <circle cx="940" cy="210" r="170" fill="url(#core)"/>
+  <g fill="none" stroke="#fff">
+    <circle class="spin1" cx="940" cy="210" r="168" stroke-opacity=".16" stroke-dasharray="2 10"/>
+    <circle class="spin2" cx="940" cy="210" r="128" stroke="#8B7BFF" stroke-opacity=".5" stroke-dasharray="60 24 6 24"/>
+    <circle class="spin3" cx="940" cy="210" r="88" stroke="#C6FF3D" stroke-opacity=".6" stroke-dasharray="140 60"/>
+    <circle cx="940" cy="210" r="48" stroke-opacity=".12"/>
+  </g>
+  <g filter="url(#glow)">
+    <g class="spin1"><circle cx="1108" cy="210" r="4" fill="#fff"/></g>
+    <g class="spin2"><circle cx="812" cy="210" r="5" fill="#8B7BFF"/></g>
+    <g class="spin3"><circle cx="1028" cy="210" r="4" fill="#C6FF3D"/></g>
+    <g class="spin4"><circle cx="982" cy="210" r="3" fill="#fff"/><circle cx="982" cy="210" r="48" fill="none"/></g>
+    <circle cx="940" cy="210" r="9" fill="#C6FF3D"/>
+  </g>
+  <circle cx="940" cy="210" r="9" fill="none" stroke="#C6FF3D" stroke-width="1.5" style="transform-origin:940px 210px;animation:pulse2 2.4s ease-out infinite"/>
+  <style>@keyframes pulse2 { 0%{transform:scale(1);opacity:.9} 100%{transform:scale(4.5);opacity:0} }</style>
+
+  <!-- flowing signal lines -->
+  <g fill="none" stroke="url(#wave)" stroke-width="2" stroke-linecap="round" pathLength="1000">
+    <path class="flow"   pathLength="1000" d="M-20 350 C 200 300, 360 400, 600 350 S 1000 300, 1220 350"/>
+    <path class="flow b" pathLength="1000" d="M-20 372 C 240 330, 420 410, 640 372 S 1000 330, 1220 372" stroke-opacity=".6"/>
+    <path class="flow c" pathLength="1000" d="M-20 392 C 260 360, 460 420, 680 392 S 1000 360, 1220 392" stroke-opacity=".35"/>
+  </g>
+
+  <!-- status -->
+  <g class="fade">
+    <circle class="pulse" cx="70" cy="52" r="4" fill="#C6FF3D"/>
+    <circle cx="70" cy="52" r="4" fill="#C6FF3D"/>
+    <text x="88" y="56" font-size="13" fill="#9A9AA2" letter-spacing="2">ONLINE  /  BROOKLYN, NY  /  40.6782° N  73.9442° W</text>
+  </g>
+
+  <!-- title -->
+  <g clip-path="url(#reveal)">
+    <text x="64" y="252" font-size="190" font-weight="800" fill="#F4F4F0" letter-spacing="-8">s5sa</text>
+  </g>
+  <rect class="cursor" x="540" y="122" width="18" height="132" fill="#C6FF3D" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" begin="1.6s" dur="0.01s" fill="freeze"/>
+  </rect>
+
+  <!-- rotating subtitle -->
+  <g font-size="22" fill="#C6FF3D">
+    <text class="sub s1" x="70" y="312">&gt; building things for the internet_</text>
+    <text class="sub s2" x="70" y="312">&gt; pull shark. yolo. ship it._</text>
+    <text class="sub s3" x="70" y="312">&gt; design x code x motion_</text>
+  </g>
+
+  <!-- scanline + vignette -->
+  <rect class="scan" x="0" y="0" width="1200" height="2" fill="#fff" opacity=".05"/>
+  <rect width="1200" height="420" fill="url(#vig)"/>
+  <rect x=".5" y=".5" width="1199" height="419" fill="none" stroke="#fff" stroke-opacity=".08"/>
+</svg>

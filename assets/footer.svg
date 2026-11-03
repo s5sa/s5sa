@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 160" width="1200" height="160" role="img" aria-label="footer">
+  <defs>
+    <linearGradient id="a" x1="0" x2="1">
+      <stop offset="0" stop-color="#C6FF3D" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#C6FF3D" stop-opacity=".9"/>
+      <stop offset="1" stop-color="#8B7BFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace; }
+    .w { fill: none; stroke: url(#a); stroke-width: 1.6; stroke-dasharray: 260 740; animation: f 8s linear infinite; }
+    .w2 { animation-duration: 12s; animation-delay: -4s; opacity: .5; }
+    @keyframes f { to { stroke-dashoffset: -1000; } }
+    @media (prefers-reduced-motion: reduce) { .w { animation: none; } }
+  </style>
+  <path class="w"  pathLength="1000" d="M0 60 C 200 20, 400 100, 600 60 S 1000 20, 1200 60"/>
+  <path class="w w2" pathLength="1000" d="M0 80 C 220 50, 420 110, 620 80 S 1000 50, 1200 80"/>
+  <text x="600" y="132" text-anchor="middle" font-size="13" fill="#8A8A92" letter-spacing="3">S5SA  /  BROOKLYN  /  2026</text>
+</svg>
